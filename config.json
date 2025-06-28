@@ -1,7 +1,7 @@
 {
     "bind_address": "0.0.0.0",
     "port": 9900,
-    "prefix": "anyjson_",
+    "prefix": "production_service_",
     "data_types_in_name": false,
     "headers": {
             "Accept": "application/json"
@@ -12,6 +12,7 @@
         "[Oo][Kk].*",
         "[Uu][Pp]",
         "1",
-        "[Pp]ass"
+        "[Pp]ass",
+        "[Ww]orking"
     ]
 }
