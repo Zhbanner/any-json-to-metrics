@@ -3,6 +3,9 @@
     "port": 9900,
     "prefix": "anyjson_",
     "data_types_in_name": false,
+    "headers": {
+            "Accept": "application/json"
+        },
     "healthy_regex": [
         "[Hh]ealth.*",
         "[Tt]rue",

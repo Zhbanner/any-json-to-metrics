@@ -27,6 +27,7 @@ class JsonCollector(object):
         self._healthy_regex = config.get("healthy_regex")
         self._prefix = config.get("prefix")
         self._show_type = config.get("data_types_in_name")
+        self._headers = config.get("headers")
 
     def parse_base_turple(self, t: tuple, endpoint, label={}) -> dict:
         '''
@@ -102,7 +103,7 @@ class JsonCollector(object):
         data = {}
         metrics = []
         try:
-            response = requests.get(self._endpoint)
+            response = requests.get(self._endpoint, headers=self._headers)
             # По мимо метрик из json добавляем 2 дополнительные:
             # код ответа и успешность получения данных
             metric = Metric('response_code', '', 'gauge')
